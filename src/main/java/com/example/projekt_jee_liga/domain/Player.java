@@ -1,4 +1,4 @@
-package main.java.com.example.servletjspdemo.domain;
+package main.java.com.example.projekt_jee_liga.domain;
 
 public class Player {
 
@@ -46,6 +46,3 @@ public class Player {
 	}
 
 }
-
-
-
