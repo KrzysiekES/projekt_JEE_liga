@@ -1,3 +1,50 @@
 body {
- background-color: aqua; 
+  font-family: 'Lato', sans-serif;
+}
+
+.naglowek {
+  background-color: #000;
+  color: #fff;
+  opacity: .9;
+}
+
+.naglowek ul {
+  margin: 0;
+  float: left;
+}
+
+.naglowek ul li {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:0;
+  height: 80px;
+}
+
+.naglowek ul li:hover {
+  opacity: 0.8;
+  background-color: #000;
+}
+
+.naglowek ul li h3 {
+  color: #fff;
+  font-family: 'Francois One', sans-serif;
+}
+
+.glowna {
+  padding: 40px 10px;
+}
+
+.glowna .przyciemnij img:hover {
+  opacity: .5;
+}
+
+.glowna  .przyciemnij {
+  background: url(../img/office.png); /*office from subtlepatterns*/
+  opacity: 1;
+}
+
+.glowna .zawartosc h2 {
+  text-align: center;
 }
