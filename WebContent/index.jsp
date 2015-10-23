@@ -17,12 +17,26 @@
   <div class="row naglowek">
     <ul class="small-block-grid-5 columns">
       <li><h3>Liga Piłkarska</h3></li>
-      <li>Piłkarze</li>
+      <li>Piłkarze
+        <ul class="rozwijaneMenu">
+      	  <li>Wyświetl Wszystkich</li>
+          <li>Dodaj</li>
+          <li>Usuń</li>
+        </ul>
+      </li>
       <li>Kluby</li>
-      <li>Sędziowie</li>
+      <li>Sędziowie
+              <ul class="rozwijaneMenu">
+      	  <li>Wyświetl Wszystkich</li>
+          <li>Dodaj</li>
+          <li>Usuń</li>
+        </ul>
+      
+      </li>
       <li>Stadiony</li>
     </ul>
   </div>
+
   <div class="glowna row">
     <div class="small-12 large-8 columns">
       <div class="przyciemnij">

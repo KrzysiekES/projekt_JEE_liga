@@ -6,6 +6,7 @@ body {
   background-color: #000;
   color: #fff;
   opacity: .9;
+  position: relative;
 }
 
 .naglowek ul {
@@ -14,6 +15,7 @@ body {
 }
 
 .naglowek ul li {
+  list-style: none;
   float: left;
   display: flex;
   align-items: center;
@@ -22,22 +24,39 @@ body {
   height: 80px;
 }
 
-.naglowek ul li:hover {
-  opacity: 0.8;
-  background-color: #000;
-}
-
 .naglowek ul li h3 {
   color: #fff;
   font-family: 'Francois One', sans-serif;
 }
 
+.rozwijaneMenu {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  color: red;
+  z-index: 9;
+  background-color: #000;
+  opacity:.8;
+}
+
+.rozwijaneMenu li {
+	height: 35px !important;
+    display: block;
+    float: left;
+    width: 25%;
+}
+
 .glowna {
   padding: 40px 10px;
 }
-
+.glowna .przyciemnij img {
+  z-index:1;
+  opacity: .3;
+}
 .glowna .przyciemnij img:hover {
-  opacity: .5;
+  opacity: 1;
 }
 
 .glowna  .przyciemnij {
