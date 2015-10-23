@@ -33,4 +33,5 @@ test-output
 #  syntax: regexp
 #  ^\.pc/
 Thumbs.db
+build
 
