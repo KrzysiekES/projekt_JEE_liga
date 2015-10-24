@@ -17,23 +17,22 @@
   <div class="row naglowek">
     <ul class="small-block-grid-5 columns">
       <li><h3>Liga Piłkarska</h3></li>
-      <li>Piłkarze
+      <li><a href="#">Piłkarze</a>
         <ul class="rozwijaneMenu">
-      	  <li>Wyświetl Wszystkich</li>
-          <li>Dodaj</li>
-          <li>Usuń</li>
+      	  <li><a href="#">Wyświetl Wszystkich</a></li>
+          <li><a href="#">Dodaj</a></li>
+          <li><a href="#">Usuń</a></li>
         </ul>
       </li>
-      <li>Kluby</li>
-      <li>Sędziowie
-              <ul class="rozwijaneMenu">
-      	  <li>Wyświetl Wszystkich</li>
-          <li>Dodaj</li>
-          <li>Usuń</li>
+      <li><a href="#">Kluby</a></li>
+      <li><a href="#">Sędziowie</a>
+        <ul class="rozwijaneMenu">
+      	  <li><a href="#">Wyświetl Wszystkich</a></li>
+          <li><a href="addPlayer.jsp">Dodaj</a></li>
+          <li><a href="#">Usuń</a></li>
         </ul>
-      
       </li>
-      <li>Stadiony</li>
+      <li><a href="#">Stadiony</a></li>
     </ul>
   </div>
 
@@ -46,6 +45,7 @@
     <div class="zawartosc small-12 large-4 columns">
       <h2>Witaj w lidze UG!</h2>
       <p><a href="hello">Fill a form</a></p>
+      <p><a href="form">Fill a form</a></p>
     </div>
   </div>
 </body>
