@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Piłkarz</title>
 </head>
 <body>
 <jsp:useBean id="player" class="main.java.com.example.projekt_jee_liga.domain.Player" scope="session" />
@@ -18,10 +18,12 @@
 %>
 
 <p>Following person has been added to storage: </p>
-<p>First name: ${player.firstName} </p>
-<p>First name: ${player.firstName} </p>
+<p> imię : ${player.firstName} </p>
+<p> nazwisko : ${player.lastName} </p>
+<p> pozycja : ${player.position} </p>
+<p> numer : ${player.number} </p>
 <p>
-  <a href="showAllPlayers.jsp">Show all persons</a>
+  <a href="showAllPlayers.jsp">Pokaż wszystkich piłkarzy</a>
 </p>
 </body>
 </html>

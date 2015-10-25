@@ -5,18 +5,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Wyświetl wszystkich Piłkarzy</title>
 </head>
 <body>
 
 <jsp:useBean id="storage" class="main.java.com.example.projekt_jee_liga.service.StorageService" scope="application" />
 <%
   for (Player player : storage.getAllPlayers()) {
-	  out.println("<p>First name: " + player.getFirstName() + "; Last name: " + player.getLastName() + "position: " + player.getPosition() + "number: "+ player.getNumber() +"</p>");
+	  out.println("<p> Imię: " + player.getFirstName() + "<br> Nazwisko: " + player.getLastName() + "<br> Pozycja: " + player.getPosition() +"<br> Numer: "+ player.getNumber() +"</p>");
   }
 %>
 <p>
-  <a href="getPersonData.jsp">Add another person</a>
+  <a href="getPlayerData.jsp">Add another person</a>
 </p>
 
 </body>

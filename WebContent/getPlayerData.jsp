@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Dodawanie Piłkarza</title>
 </head>
 <body>
 
@@ -13,11 +13,11 @@
 
 <form action="addPlayer.jsp">
 
-  First name :<input type="text" name="firstName" value="${player.firstName}" /><br />
-  Year of birth :<input type="text"  name="yob" value="${player.lastName}" /><br />
-  Year of birth :<input type="text"  name="yob" value="${player.position}" /><br />
-  Year of birth :<input type="text"  name="yob" value="${player.number}" /><br />
-  <input type="submit" value=" OK ">
+  Podaj imię :<input type="text" name="firstName" value="${player.firstName}" /><br />
+  Podaj nazwisko :<input type="text"  name="lastName" value="${player.lastName}" /><br />
+  Podaj pozycję :<input type="text"  name="position" value="${player.position}" /><br />
+  podaj numer na koszulce :<input type="number"  name="number" value="${player.number}" /><br />
+  <input type="submit" value="Zatwierdź">
   
 </form>
 

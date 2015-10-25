@@ -47,8 +47,7 @@
       <h2>Witaj w lidze UG!</h2>
 
         <p><a href="hello">See greetings from servlet</a></p>
-        <p><a href="form">Fill a form</a></p>
-        <p><a href="getPlayerData.jsp">Fill a Person form</a></p>
+        <p><a href="getPlayerData.jsp">Dodaj Piłkarza</a></p>
     </div>
   </div>
 </body>
