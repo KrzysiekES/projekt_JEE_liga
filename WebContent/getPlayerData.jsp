@@ -20,7 +20,7 @@
  <!--Zwykłe menu -->
   <div class="row naglowek">
     <ul class="small-block-grid-5 columns">
-      <li class="logo"><h3><a href="#">Liga Piłkarska</a></h3></li>
+      <li class="logo"><h3><a href="index.jsp">Liga Piłkarska</a></h3></li>
       <li class="menu"><a href="#">Piłkarze</a>
         <ul class="rozwijaneMenu">
           <li><a href="showAllPlayers.jsp">Wyświetl Wszystkich</a></li>
@@ -46,8 +46,8 @@
     <h3>Liga Piłkarska</h3>
     <div class="hamburger"><i class="fa fa-bars"></i></div>
     <ul class="rozwijaneResponsywne">
-      <li><a href="#">Dodaj piłkarza</a></li>
-      <li><a href="#">Zobacz Piłkarzy</a></li>
+      <li><a href="getPlayerData.jsp">Dodaj piłkarza</a></li>
+      <li><a href="showAllPlayers.jsp">Zobacz Piłkarzy</a></li>
       <li><a href="#">Edytuj piłkarza</a></li>
     </ul>
   </div>
