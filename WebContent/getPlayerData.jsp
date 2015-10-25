@@ -12,7 +12,6 @@
 <jsp:useBean id="player" class="main.java.com.example.projekt_jee_liga.domain.Player" scope="session" />
 
 <form action="addPlayer.jsp">
-
   Podaj imię :<input type="text" name="firstName" value="${player.firstName}" /><br />
   Podaj nazwisko :<input type="text"  name="lastName" value="${player.lastName}" /><br />
   Podaj pozycję :<input type="text"  name="position" value="${player.position}" /><br />

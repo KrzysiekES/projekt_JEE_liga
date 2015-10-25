@@ -1,7 +1,7 @@
 body {
   font-family: 'Lato', sans-serif;
 }
-
+/*nag³owek*/
 .naglowek {
   background-color: #000;
   color: #fff;
@@ -17,18 +17,42 @@ body {
 .naglowek ul li {
   list-style: none;
   float: left;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding:0;
+  display: block;
+  text-align: center;
   height: 80px;
+}
+
+.naglowek ul li:hover {
+  background-color: #116;
+}
+
+.naglowek ul .logo:hover {
+  background-color: black;
+}
+
+.naglowek ul .logo {
+  padding-top: 20px;
+}
+
+.naglowek ul .logo a {
+  padding: 0;
+}
+
+.naglowek ul .menu:hover {
+  border-bottom: 3px solid #fff;
+}
+
+.naglowek ul li a {
+  padding: 27px 0;
+  color: #fff;
+  display: block;
 }
 
 .naglowek ul li h3 {
   color: #fff;
   font-family: 'Francois One', sans-serif;
 }
-
+/*rozwijane Menu */
 .rozwijaneMenu {
   display: none;
   position: absolute;
@@ -38,32 +62,89 @@ body {
   color: red;
   z-index: 9;
   background-color: #000;
-  opacity:.8;
+  opacity:.9;
 }
 
 .rozwijaneMenu li {
-	height: 35px !important;
-    display: block;
-    float: left;
-    width: 25%;
+  height: 65px !important;
+  display: block;
+  float: left;
+  width: 20%;
 }
 
+.rozwijaneMenu li:hover {
+  border-bottom: 3px solid #fff;
+}
+
+.rozwijaneMenu li a  {
+  padding: 22px 0 !important;
+}
+
+.responsywneMenu {
+  display: none;
+}
+
+/*G³owna*/
 .glowna {
   padding: 40px 10px;
-}
-.glowna .przyciemnij img {
-  z-index:1;
-  opacity: .3;
-}
-.glowna .przyciemnij img:hover {
-  opacity: 1;          
-}
-
-.glowna  .przyciemnij {
-  background: url(../img/office.png); /*office from subtlepatterns*/
-  opacity: 1;
 }
 
 .glowna .zawartosc h2 {
   text-align: center;
+}
+
+/* Tablety */
+@media only screen  and (max-width: 768px){ 
+ 
+  .naglowek {
+    display: none; 
+  }
+  
+  .responsywneMenu {
+    display: inherit;
+    background-color: #000;
+    color: #fff;
+    opacity: .9; 
+ }
+
+  .responsywneMenu h3 {
+    padding: 15px;
+    color: #fff;
+    float:left:
+  }
+  
+  .rozwijaneResponsywne {
+    display: none; 
+  }
+  
+  .responsywneMenu .hamburger {
+    position: absolute;
+    display: block;
+    top: 15px;
+    right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+   .responsywneMenu ul {
+     z-index: 10;
+    margin: -20px;
+    padding: 0;
+    text-align: center;
+    background-color: #000;
+   }
+  
+  .responsywneMenu ul li {
+    height: 35px;
+  }
+  
+  .responsywneMenu ul li:hover {
+   background-color: #116;
+  }
+  
+  .responsywneMenu ul li a {
+    padding: 5px 0;
+    color: #fff;
+    display: block;
+  }
 }
