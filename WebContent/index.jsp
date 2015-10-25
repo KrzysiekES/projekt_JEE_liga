@@ -19,16 +19,17 @@
       <li><h3>Liga Piłkarska</h3></li>
       <li><a href="#">Piłkarze</a>
         <ul class="rozwijaneMenu">
-      	  <li><a href="#">Wyświetl Wszystkich</a></li>
-          <li><a href="#">Dodaj</a></li>
-          <li><a href="#">Usuń</a></li>
+      	  <li><a href="showAllPlayers.jsp">Wyświetl Wszystkich</a></li>
+          <li><a href="addPlayer.jsp">Dodaj</a></li>
+          <li><a href="#">Edytuj</a></li>
+          <li><a href="getPlayerData.jsp">Usuń</a></li>
         </ul>
       </li>
       <li><a href="#">Kluby</a></li>
       <li><a href="#">Sędziowie</a>
         <ul class="rozwijaneMenu">
       	  <li><a href="#">Wyświetl Wszystkich</a></li>
-          <li><a href="addPlayer.jsp">Dodaj</a></li>
+          <li><a href="#">Dodaj</a></li>
           <li><a href="#">Usuń</a></li>
         </ul>
       </li>

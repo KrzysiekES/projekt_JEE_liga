@@ -1,3 +1,4 @@
+<%@page import="main.java.com.example.projekt_jee_liga.domain.Player"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,21 +8,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:useBean id="player" class="main.java.com.example.projekt_jee_liga.domain.Player" scope="session" />
-
-<jsp:setProperty name="player" property="*" /> 
 
 <jsp:useBean id="storage" class="main.java.com.example.projekt_jee_liga.service.StorageService" scope="application" />
-
-<% 
-  storage.add(player);
+<%
+  for (Player player : storage.getAllPlayers()) {
+	  out.println("<p>First name: " + player.getFirstName() + "; Last name: " + player.getLastName() + "position: " + player.getPosition() + "number: "+ player.getNumber() +"</p>");
+  }
 %>
-
-<p>Following person has been added to storage: </p>
-<p>First name: ${person.firstName} </p>
-<p>Year of birth: <jsp:getProperty name="person" property="yob"></jsp:getProperty></p>
 <p>
-  <a href="showAllPersons.jsp">Show all persons</a>
+  <a href="getPersonData.jsp">Add another person</a>
 </p>
+
 </body>
 </html>

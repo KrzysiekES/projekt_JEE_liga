@@ -11,8 +11,6 @@ public class StorageService {
 	private List<Player> db = new ArrayList<Player>();
 	
 	public void add(Player player){
-		Player test = new Player();
-		test.setFirstName("lel");
 		Player newPlayer = new Player (player.getFirstName(), player.getLastName(), player.getPosition(), player.getNumber());
 		db.add(newPlayer);
 	}
