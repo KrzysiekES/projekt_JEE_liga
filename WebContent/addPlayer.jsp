@@ -18,10 +18,10 @@
 %>
 
 <p>Following person has been added to storage: </p>
-<p>First name: ${person.firstName} </p>
-<p>Year of birth: <jsp:getProperty name="person" property="yob"></jsp:getProperty></p>
+<p>First name: ${player.firstName} </p>
+<p>First name: ${player.firstName} </p>
 <p>
-  <a href="showAllPersons.jsp">Show all persons</a>
+  <a href="showAllPlayers.jsp">Show all persons</a>
 </p>
 </body>
 </html>

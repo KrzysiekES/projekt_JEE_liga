@@ -9,14 +9,14 @@
 <body>
 
 <jsp:useBean id="storage" class="main.java.com.example.projekt_jee_liga.service.StorageService" scope="application" />
-<jsp:useBean id="person" class="main.java.com.example.projekt_jee_liga.domain.Player" scope="session" />
+<jsp:useBean id="player" class="main.java.com.example.projekt_jee_liga.domain.Player" scope="session" />
 
-<form action="addPerson.jsp">
+<form action="addPlayer.jsp">
 
-  First name :<input type="text" name="firstName" value="${person.firstName}" /><br />
-  Year of birth :<input type="text"  name="yob" value="${person.lastName}" /><br />
-  Year of birth :<input type="text"  name="yob" value="${person.position}" /><br />
-  Year of birth :<input type="text"  name="yob" value="${person.number}" /><br />
+  First name :<input type="text" name="firstName" value="${player.firstName}" /><br />
+  Year of birth :<input type="text"  name="yob" value="${player.lastName}" /><br />
+  Year of birth :<input type="text"  name="yob" value="${player.position}" /><br />
+  Year of birth :<input type="text"  name="yob" value="${player.number}" /><br />
   <input type="submit" value=" OK ">
   
 </form>
