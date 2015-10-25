@@ -22,7 +22,7 @@
       <li class="menu"><a href="#">Piłkarze</a>
         <ul class="rozwijaneMenu">
           <li><a href="showAllPlayers.jsp">Wyświetl Wszystkich</a></li>
-          <li><a href="addPlayer.jsp">Dodaj</a></li>
+          <li><a href="getPlayerData.jsp">Dodaj</a></li>
           <li><a href="#">Edytuj</a></li>
           <li><a href="getPlayerData.jsp">Usuń</a></li>
         </ul>
