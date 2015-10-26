@@ -24,6 +24,8 @@ public class DataServlet extends HttpServlet {
 		
 
 		out.println("<html><body><h2>Your data</h2>" +
+				"<p>id pilkarza: " + request.getParameter("playerId") + "<br />" +
+				"<p>id klubu: " + request.getParameter("clubId") + "<br />" +
 				"<p>First name: " + request.getParameter("firstName") + "<br />" +
 				"<p>Last name: " + request.getParameter("lastName") + "<br />" +
 				"<p>position: " + request.getParameter("position") + "<br />" +
