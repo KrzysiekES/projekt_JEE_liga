@@ -1,7 +1,8 @@
 package main.java.com.example.projekt_jee_liga.domain;
 
 public class Player {
-
+	private int playerId=1;
+	private int clubId;
 	private String firstName = "unknown";
 	private String lastName = "unknown";
 	private String position = "unknown";
@@ -12,8 +13,10 @@ public class Player {
 		super();
 	}
 	//Konstruktor
-	public Player(String firstName, String lastName, String position, int number) {
+	public Player(int playerId, int clubId, String firstName, String lastName, String position, int number) {
 		super();
+		this.setPlayerId(playerId);
+		this.setClubId(clubId);
 		this.firstName = firstName;
 		this.setLastName(lastName);
 		this.setPosition(position);
@@ -43,6 +46,18 @@ public class Player {
 	}
 	public void setPosition(String position) {
 		this.position = position;
+	}
+	public int getPlayerId() {
+		return playerId;
+	}
+	public void setPlayerId(int playerId) {
+		this.playerId = playerId;
+	}
+	public int getClubId() {
+		return clubId;
+	}
+	public void setClubId(int clubId) {
+		this.clubId = clubId;
 	}
 
 }
