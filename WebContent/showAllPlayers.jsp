@@ -22,7 +22,7 @@
  <!--Zwykłe menu -->
   <div class="row naglowek">
     <ul class="small-block-grid-5 columns">
-      <li class="logo"><h3><a href="index.jsp">Liga Piłkarska</a></h3></li>
+      <li class="logo"><h3><a href="#">Liga Piłkarska</a></h3></li>
       <li class="menu"><a href="#">Piłkarze</a>
         <ul class="rozwijaneMenu">
           <li><a href="showAllPlayers.jsp">Wyświetl Wszystkich</a></li>
@@ -31,15 +31,15 @@
           <li><a href="getPlayerData.jsp">Usuń</a></li>
         </ul>
       </li>
-      <li><a href="#">Kluby</a></li>
-      <li class="menu"><a href="#">Sędziowie</a>
-        <ul class="rozwijaneMenu">
+      <li class="menu"><a href="#">Kluby</a>
+      	<ul class="rozwijaneMenu">
           <li><a href="#">Wyświetl Wszystkich</a></li>
           <li><a href="#">Dodaj</a></li>
           <li><a href="#">Usuń</a></li>
         </ul>
       </li>
-      <li><a href="#">Stadiony</a></li>
+      <li><a href="#">O mnie</a></li>
+      <li><a href="#">O projekcie</a></li>
     </ul>
   </div>
   
@@ -48,22 +48,28 @@
     <h3>Liga Piłkarska</h3>
     <div class="hamburger"><i class="fa fa-bars"></i></div>
     <ul class="rozwijaneResponsywne">
-      <li><a href="getPlayerData.jsp">Dodaj piłkarza</a></li>
-      <li><a href="showAllPlayers.jsp">Zobacz Piłkarzy</a></li>
+      <li><a href="#">Dodaj piłkarza</a></li>
+      <li><a href="#">Zobacz Piłkarzy</a></li>
       <li><a href="#">Edytuj piłkarza</a></li>
     </ul>
   </div>
-  <div class="glowna row">
-<%
-	int i=1;
-  for (Player player : storage.getAllPlayers()) {
-	  out.println("<p>" + i +". id playera:" + player.getPlayerId() + " id klubu: " + player.getClubId() + " <b>Imię:</b> " + player.getFirstName() + " <b>Nazwisko:</b> " + player.getLastName() + " <b>Pozycja:</b> " + player.getPosition() +" <b>Numer:</b> "+ player.getNumber() +"</p>");
- 	i++;
- 	storage.getAllPlayers().get(2).getLastName();
-  }
-%>
+  
+  <div class="glowna row text-center">
+  <h1>Lista wszystkich piłkarzy</h1>
+	<div class="listaWszystkich">
+	<%
+		int i=1;
+  		for (Player player : storage.getAllPlayers()) {
+	  		out.println("<p><b>" + i +".</b> <b>id playera:</b>" + player.getPlayerId() + " <b>id klubu:</b> " + player.getClubId() + " <b>Imię:</b> " + player.getFirstName() + " <b>Nazwisko:</b> " + player.getLastName() + " <b>Pozycja:</b> " + player.getPosition() +" <b>Numer:</b> "+ player.getNumber() +"</p>");
+ 			i++;
+ 			/*storage.getAllPlayers().get(2).getLastName();*/
+  		}
+	%>
+	</div>
 <p>
-  <a href="getPlayerData.jsp">Add another person</a>
+	<div class="dodajKolejnego">
+  		<a href="getPlayerData.jsp">Add another person</a>
+  	</div>
 </p>
 </div>
 </body>

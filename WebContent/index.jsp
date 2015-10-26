@@ -27,15 +27,15 @@
           <li><a href="getPlayerData.jsp">Usuń</a></li>
         </ul>
       </li>
-      <li><a href="#">Kluby</a></li>
-      <li class="menu"><a href="#">Sędziowie</a>
-        <ul class="rozwijaneMenu">
+      <li class="menu"><a href="#">Kluby</a>
+      	<ul class="rozwijaneMenu">
           <li><a href="#">Wyświetl Wszystkich</a></li>
           <li><a href="#">Dodaj</a></li>
           <li><a href="#">Usuń</a></li>
         </ul>
       </li>
-      <li><a href="#">Stadiony</a></li>
+      <li><a href="#">O mnie</a></li>
+      <li><a href="#">O projekcie</a></li>
     </ul>
   </div>
   
