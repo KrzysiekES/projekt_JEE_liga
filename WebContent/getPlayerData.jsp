@@ -54,6 +54,8 @@
     <div class="glowna row">
   
 <form action="addPlayer.jsp">
+  Podaj id pilkarza :<input type="number" name="playerId" value="${player.playerId}" /><br />
+  Podaj id klubu :<input type="number" name="clubId" value="${player.clubId}" /><br />
   Podaj imię :<input type="text" name="firstName" value="${player.firstName}" /><br />
   Podaj nazwisko :<input type="text"  name="lastName" value="${player.lastName}" /><br />
   Podaj pozycję :<input type="text"  name="position" value="${player.position}" /><br />
