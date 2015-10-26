@@ -58,6 +58,8 @@
 %>
   <div class="glowna row">
 <p>Dodałeś/aś : </p>
+<p> id pilkarza : ${player.playerId} </p>
+<p> id klubu: ${player.clubId} </p>
 <p> imię : ${player.firstName} </p>
 <p> nazwisko : ${player.lastName} </p>
 <p> pozycja : ${player.position} </p>

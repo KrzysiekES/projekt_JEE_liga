@@ -57,8 +57,9 @@
 <%
 	int i=1;
   for (Player player : storage.getAllPlayers()) {
-	  out.println("<p>" + i +". Imię: " + player.getFirstName() + " Nazwisko: " + player.getLastName() + " Pozycja: " + player.getPosition() +" Numer: "+ player.getNumber() +"</p>");
+	  out.println("<p>" + i +". <b>Imię:</b> " + player.getFirstName() + " <b>Nazwisko:</b> " + player.getLastName() + " <b>Pozycja:</b> " + player.getPosition() +" <b>Numer:</b> "+ player.getNumber() +"</p>");
  	i++;
+ 	storage.getAllPlayers().get(2).getLastName();
   }
 %>
 <p>
