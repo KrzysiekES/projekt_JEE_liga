@@ -54,16 +54,17 @@
   
   
     <div class="glowna row">
-  
+  <h2>Uzupełnij Formularz</h2>
 <form action="addPlayer.jsp">
-  Podaj id pilkarza :<input type="number" name="playerId" value="${player.playerId}" /><br />
-  Podaj id klubu :<input type="number" name="clubId" value="${player.clubId}" /><br />
-  Podaj imię :<input type="text" name="firstName" value="${player.firstName}" /><br />
-  Podaj nazwisko :<input type="text"  name="lastName" value="${player.lastName}" /><br />
-  Podaj pozycję :<input type="text"  name="position" value="${player.position}" /><br />
-  podaj numer na koszulce :<input type="number"  name="number" value="${player.number}" /><br />
-  <input type="submit" value="Zatwierdź">
- 
+
+  <div class="large-3 small-12 columns">Podaj id pilkarza :<input type="number" min="1" name="playerId" value="${player.playerId}" /></div>
+  <div class="large-3 small-12 columns">Podaj id klubu :<input type="number" min="1" name="clubId" value="${player.clubId}" /></div>
+  <div class="large-6 small-12 columns">Podaj imię :<input type="text" name="firstName" value="${player.firstName}" /></div>
+  <div class="large-4 small-12 columns">Podaj nazwisko :<input type="text"  name="lastName" value="${player.lastName}" /></div>
+  <div class="large-4 small-12 columns">Podaj pozycję :<input type="text"  name="position" value="${player.position}" /></div>
+  <div class="large-4 small-12 columns">podaj numer na koszulce :<input type="number" min="1"  name="number" value="${player.number}" /></div>
+  <div class="column"><input type="submit" value="Zatwierdź"></div>
+
 </form>
 </div>
 </body>
