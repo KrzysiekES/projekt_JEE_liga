@@ -6,7 +6,7 @@ import java.util.List;
 import main.java.com.example.projekt_jee_liga.domain.Player;
 
 public class StorageService {
-	
+	int usun;
 	
 	private List<Player> db = new ArrayList<Player>();
 	

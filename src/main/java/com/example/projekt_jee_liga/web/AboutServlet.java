@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/hello")
-public class GreetingServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/about")
+public class AboutServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -21,7 +21,16 @@ public class GreetingServlet extends HttpServlet {
 		response.setContentType("text/html");
 		
 		PrintWriter out = response.getWriter();
-		out.println("<html><body><h2>Hello World! Today is</h2></body></html>");
+		
+
+		out.println("<html><body><h2>Your data</h2>" +
+				"<p>id pilkarza: " + request.getParameter("playerId") + "<br />" +
+				"<p>id klubu: " + request.getParameter("clubId") + "<br />" +
+				"<p>First name: " + request.getParameter("firstName") + "<br />" +
+				"<p>Last name: " + request.getParameter("lastName") + "<br />" +
+				"<p>position: " + request.getParameter("position") + "<br />" +
+				"<p>number: " + request.getParameter("number") + "<br />" +
+				"</body></html>");
 		out.close();
 	}
 

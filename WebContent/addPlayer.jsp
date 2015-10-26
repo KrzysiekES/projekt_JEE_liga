@@ -22,7 +22,7 @@
  <!--Zwykłe menu -->
   <div class="row naglowek">
     <ul class="small-block-grid-5 columns">
-      <li class="logo"><h3><a href="#">Liga Piłkarska</a></h3></li>
+      <li class="logo"><h3><a href="index.jsp">Liga Piłkarska</a></h3></li>
       <li class="menu"><a href="#">Piłkarze</a>
         <ul class="rozwijaneMenu">
           <li><a href="showAllPlayers.jsp">Wyświetl Wszystkich</a></li>
@@ -38,7 +38,7 @@
           <li><a href="#">Usuń</a></li>
         </ul>
       </li>
-      <li><a href="#">O mnie</a></li>
+      <li><a href="about">O mnie</a></li>
       <li><a href="#">O projekcie</a></li>
     </ul>
   </div>

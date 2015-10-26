@@ -95,8 +95,8 @@ body {
 }
 /* ShowAllPlayers.jsp */
 .glowna .dodajKolejnego {
- border: 3px solid #000;
- transition: all .5s ease-out;
+  border: 3px solid #000;
+  transition: all .5s ease-out;
 }
 .glowna .dodajKolejnego a {
   color: #000;
