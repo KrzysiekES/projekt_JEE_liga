@@ -71,7 +71,7 @@
 
 	</div>
 <p>
-	<div class="dodajKolejnego">
+	<div class="przycisk">
   		<a href="getPlayerData.jsp">Add another person</a>
   	</div>
 </p>

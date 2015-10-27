@@ -89,30 +89,37 @@ body {
 .glowna {
   padding: 40px 10px;
 }
+
 /* INDEX.jsp */
 .glowna .zawartosc h2 {
   text-align: center;
 }
-/* ShowAllPlayers.jsp */
-.glowna .dodajKolejnego {
+
+/* Przyciski */
+.glowna .przycisk {
   border: 3px solid #000;
   transition: all .5s ease-out;
 }
-.glowna .dodajKolejnego a {
+
+.glowna .przycisk a {
   color: #000;
   display:block;
   padding: 10px 20px;
   font-weight: 600;
   transition: all .5s ease-out;
+  text-align: center;
 }
-.glowna .dodajKolejnego a:hover {
+
+.glowna .przycisk a:hover {
  color: #fff;
 	
 }
-.glowna .dodajKolejnego:hover {
+.glowna .przycisk:hover {
   background-color: #000;
   color: #fff;
 }
+
+/*Wyswietl wszystkich */
 .glowna .listaWszystkich b {
   padding-left: 25px;
 	

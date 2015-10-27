@@ -57,16 +57,31 @@
   storage.add(player);
 %>
   <div class="glowna row">
-<p>Dodałeś/aś : </p>
-<p> id pilkarza : ${player.playerId} </p>
-<p> id klubu: ${player.clubId} </p>
-<p> imię : ${player.firstName} </p>
-<p> nazwisko : ${player.lastName} </p>
-<p> pozycja : ${player.position} </p>
-<p> numer : ${player.number} </p>
-<p>
+  <table>
+  <caption>Dodałeś/aś :</caption>
+  	<tr>
+  		<td>id pilkarza :</td><td>${player.playerId}</td>
+  	</tr>
+  	<tr>
+  		<td>id klubu:</td><td>${player.clubId}</td>
+  	</tr>
+  	<tr>
+  		<td>imię :</td><td>${player.firstName}</td>
+  	</tr>
+  	<tr>
+  		<td>nazwisko :</td><td>${player.lastName}</td>
+  	</tr>
+  	<tr>
+  		<td>pozycja :</td><td>${player.position}</td>
+  	</tr>
+  	<tr>
+  		<td>numer :</td><td>${player.number}</td>
+  	</tr>
+  </table>
+
+<div class="przycisk">
   <a href="showAllPlayers.jsp">Pokaż wszystkich piłkarzy</a>
-</p>
+</div>
 </div>
 </body>
 </html>
