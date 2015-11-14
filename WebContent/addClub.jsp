@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -12,10 +13,12 @@
   <script src="js/modernizr.js" type="text/javascript" ></script>
   <script src="js/foundation.min.js" type="text/javascript" ></script>
   <script src="js/main.js" type="text/javascript"></script>
+</head>
 <body>
-
+<jsp:useBean id="club" class="main.java.com.example.projekt_jee_liga.domain.Club" scope="session" />
+<jsp:setProperty name="club" property="*" /> 
 <jsp:useBean id="storage" class="main.java.com.example.projekt_jee_liga.service.StorageService" scope="application" />
-<jsp:useBean id="player" class="main.java.com.example.projekt_jee_liga.domain.Player" scope="session" />
+
  <!--Zwykłe menu -->
   <div class="row naglowek">
     <ul class="small-block-grid-5 columns">
@@ -50,21 +53,30 @@
       <li><a href="#">Edytuj piłkarza</a></li>
     </ul>
   </div>
-  
-  
-    <div class="glowna row">
-  <h2>Uzupełnij Formularz</h2>
-<form action="addPlayer.jsp">
+<% 
+  storage.addC(club);
+%>
+  <div class="glowna row">
+  <table>
+  <caption>Dodałeś/aś :</caption>
+  	<tr>
+  		<td>id klubu :</td><td>${club.clubId}</td>
+  	</tr>
+  	<tr>
+  		<td>nazwa:</td><td>${club.clubName}</td>
+  	</tr>
+  	<tr>
+  		<td>miasto :</td><td>${club.clubCity}</td>
+  	</tr>
+  	<tr>
+  		<td>menadżer :</td><td>${club.clubMenager}</td>
+  	</tr>
 
-  <div class="large-3 small-12 columns">Podaj id pilkarza :<input type="number" min="1" name="playerId" value="${player.playerId}" /></div>
-  <div class="large-3 small-12 columns">Podaj id klubu :<input type="number" min="1" name="clubId" value="${player.clubId}" /></div>
-  <div class="large-6 small-12 columns">Podaj imię :<input type="text" name="firstName" value="${player.firstName}" /></div>
-  <div class="large-4 small-12 columns">Podaj nazwisko :<input type="text"  name="lastName" value="${player.lastName}" /></div>
-  <div class="large-4 small-12 columns">Podaj pozycję :<input type="text"  name="position" value="${player.position}" /></div>
-  <div class="large-4 small-12 columns">podaj numer na koszulce :<input type="number" min="1"  name="number" value="${player.number}" /></div>
-  <div class="column"><input type="submit" value="Zatwierdź"></div>
+  </table>
 
-</form>
+<div class="przycisk">
+  <a href="showAllClubs.jsp">Pokaż wszystkie kluby</a>
+</div>
 </div>
 </body>
 </html>

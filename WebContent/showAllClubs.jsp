@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <html>
@@ -12,10 +13,11 @@
   <script src="js/modernizr.js" type="text/javascript" ></script>
   <script src="js/foundation.min.js" type="text/javascript" ></script>
   <script src="js/main.js" type="text/javascript"></script>
+</head>
 <body>
 
 <jsp:useBean id="storage" class="main.java.com.example.projekt_jee_liga.service.StorageService" scope="application" />
-<jsp:useBean id="player" class="main.java.com.example.projekt_jee_liga.domain.Player" scope="session" />
+
  <!--Zwykłe menu -->
   <div class="row naglowek">
     <ul class="small-block-grid-5 columns">
@@ -50,21 +52,33 @@
       <li><a href="#">Edytuj piłkarza</a></li>
     </ul>
   </div>
-  
-  
-    <div class="glowna row">
-  <h2>Uzupełnij Formularz</h2>
-<form action="addPlayer.jsp">
+  <%@page import="main.java.com.example.projekt_jee_liga.domain.Club"%>
+  <div class="glowna row text-center">
+  <h1>Lista wszystkich Klubów</h1>
+	<div class="listaWszystkich">
+	<%
+		int i=1;
+  		for (Club club : storage.getAllClubs()) {
+	  		out.println("<p><b>" + i +".</b> <b>id klubu:</b>" + club.getClubId() + " <b> nazwa:</b> " + club.getClubName() + " <b> miasto:</b> " + club.getClubCity() + " <b>menadzer:</b> " + club.getClubMenager()  + "</p>");
+ 			i++;
+ 			/*storage.getAllPlayers().get(2).getLastName();*/
+  		}
+  		
+  		/* usuwanie z listy
+  		storage.getAllPlayers().remove(storage.getAllPlayers().get(1));
+  		*/
+	%>
 
-  <div class="large-3 small-12 columns">Podaj id pilkarza :<input type="number" min="1" name="playerId" value="${player.playerId}" /></div>
-  <div class="large-3 small-12 columns">Podaj id klubu :<input type="number" min="1" name="clubId" value="${player.clubId}" /></div>
-  <div class="large-6 small-12 columns">Podaj imię :<input type="text" name="firstName" value="${player.firstName}" /></div>
-  <div class="large-4 small-12 columns">Podaj nazwisko :<input type="text"  name="lastName" value="${player.lastName}" /></div>
-  <div class="large-4 small-12 columns">Podaj pozycję :<input type="text"  name="position" value="${player.position}" /></div>
-  <div class="large-4 small-12 columns">podaj numer na koszulce :<input type="number" min="1"  name="number" value="${player.number}" /></div>
-  <div class="column"><input type="submit" value="Zatwierdź"></div>
+	</div>
+	<form action="deleteClub">
+      <input type='number' name='iddelete' min="1"/>   
+      <input type='submit' value="usun" />
+    </form>
 
-</form>
+	<div class="przycisk">
+  		<a href="getClubData.jsp">Dodaj kolejny Klub</a>
+  	</div>
+
 </div>
 </body>
 </html>

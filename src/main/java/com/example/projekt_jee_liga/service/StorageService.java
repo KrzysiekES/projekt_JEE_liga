@@ -22,8 +22,8 @@ public class StorageService {
 		return players;
 	}
 	
-	public void add(Club club){
-		Club newClub = new Club (club.getClubId(), club.getClubName(), club.getClubCity(), club.getClubMenager());
+	public void addC(Club club){
+		Club newClub = new Club(club.getClubId(), club.getClubName(), club.getClubCity(), club.getClubMenager());
 		
 		clubs.add(newClub);
 	}

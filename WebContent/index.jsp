@@ -29,8 +29,8 @@
       </li>
       <li class="menu"><a href="#">Kluby</a>
       	<ul class="rozwijaneMenu">
-          <li><a href="#">Wyświetl Wszystkich</a></li>
-          <li><a href="#">Dodaj</a></li>
+          <li><a href="showAllClubs.jsp">Wyświetl Wszystkich</a></li>
+          <li><a href="getClubData.jsp">Dodaj</a></li>
           <li><a href="#">Usuń</a></li>
         </ul>
       </li>

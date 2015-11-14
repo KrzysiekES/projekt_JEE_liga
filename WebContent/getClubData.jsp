@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,7 +16,7 @@
 <body>
 
 <jsp:useBean id="storage" class="main.java.com.example.projekt_jee_liga.service.StorageService" scope="application" />
-<jsp:useBean id="player" class="main.java.com.example.projekt_jee_liga.domain.Player" scope="session" />
+<jsp:useBean id="club" class="main.java.com.example.projekt_jee_liga.domain.Club" scope="session" />
  <!--Zwykłe menu -->
   <div class="row naglowek">
     <ul class="small-block-grid-5 columns">
@@ -54,14 +55,12 @@
   
     <div class="glowna row">
   <h2>Uzupełnij Formularz</h2>
-<form action="addPlayer.jsp">
+<form action="addClub.jsp">
 
-  <div class="large-3 small-12 columns">Podaj id pilkarza :<input type="number" min="1" name="playerId" value="${player.playerId}" /></div>
-  <div class="large-3 small-12 columns">Podaj id klubu :<input type="number" min="1" name="clubId" value="${player.clubId}" /></div>
-  <div class="large-6 small-12 columns">Podaj imię :<input type="text" name="firstName" value="${player.firstName}" /></div>
-  <div class="large-4 small-12 columns">Podaj nazwisko :<input type="text"  name="lastName" value="${player.lastName}" /></div>
-  <div class="large-4 small-12 columns">Podaj pozycję :<input type="text"  name="position" value="${player.position}" /></div>
-  <div class="large-4 small-12 columns">podaj numer na koszulce :<input type="number" min="1"  name="number" value="${player.number}" /></div>
+  <div class="large-2 small-12 columns">Podaj id :<input type="number" min="1" name="clubId" value="${club.clubId}" /></div>
+  <div class="large-10 small-12 columns">Podaj nazwę :<input type="text" name="clubName" value="${club.clubName}" /></div>
+  <div class="large-6 small-12 columns">Podaj miasto :<input type="text"  name="clubCity" value="${club.clubCity}" /></div>
+  <div class="large-6 small-12 columns">Podaj menadzera :<input type="text"  name="clubMenager" value="${club.clubMenager}" /></div>
   <div class="column"><input type="submit" value="Zatwierdź"></div>
 
 </form>

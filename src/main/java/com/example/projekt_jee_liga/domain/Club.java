@@ -12,6 +12,10 @@ public class Club {
 	//Konstruktor
 	public Club(int clubId, String clubName, String clubCity, String clubMenager) {
 		super();
+		this.setClubId(clubId);
+		this.setClubName(clubName);
+		this.setClubCity(clubCity);
+		this.setClubMenager(clubMenager);
 
 	}
 	public int getClubId() {
