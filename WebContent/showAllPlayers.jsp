@@ -70,11 +70,16 @@
 	%>
 
 	</div>
-<p>
+	<form action="deletePlayer">
+     <input type='text' name='iddelete' value="Podaj ID"/>
+        
+         <input type='submit' value="usun" />
+     </form>
+
 	<div class="przycisk">
-  		<a href="getPlayerData.jsp">Add another person</a>
+  		<a href="getPlayerData.jsp">Dodaj kolejnego Piłkarza</a>
   	</div>
-</p>
+
 </div>
 </body>
 </html>
