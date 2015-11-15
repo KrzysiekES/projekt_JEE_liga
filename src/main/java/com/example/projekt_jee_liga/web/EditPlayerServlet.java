@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/editcustomer")
+@WebServlet(urlPatterns = "/editPlayer")
 public class EditPlayerServlet extends HttpServlet
 {
     /**
@@ -25,11 +25,11 @@ public class EditPlayerServlet extends HttpServlet
         response.setContentType("text/html");
 
         int ID = Integer.parseInt(request.getParameter("id"));
-        int ClubId = Integer.parseInt(request.getParameter("clubId"));   //ID specified by a user
-        String FirstName = request.getParameter("firstName");           //New first name value
-        String LastName = request.getParameter("lastName");             // --,,--
-        String Position = request.getParameter("position");     // --,,--
-        int Number = Integer.parseInt(request.getParameter("number"));                // --,,--
+        int ClubId = Integer.parseInt(request.getParameter("clubId"));   
+        String FirstName = request.getParameter("firstName");          
+        String LastName = request.getParameter("lastName");        
+        String Position = request.getParameter("position");    
+        int Number = Integer.parseInt(request.getParameter("number"));              
 
         StorageService ss = (StorageService) getServletContext().getAttribute("storage");
 
@@ -38,6 +38,7 @@ public class EditPlayerServlet extends HttpServlet
             if (ss.getAllPlayers().get(i).getPlayerId() == ID)
             {
                 Player p = ss.getAllPlayers().get(i);
+               p.setPlayerId(ID);
                 p.setClubId(ClubId);
                 p.setFirstName(FirstName);
                 p.setLastName(LastName);
@@ -47,7 +48,6 @@ public class EditPlayerServlet extends HttpServlet
             }
         }
 
-        //Navigate to page with list of all customers
         this.getServletContext().getRequestDispatcher("/showAllPlayers.jsp").forward(request, response);
     }
 }

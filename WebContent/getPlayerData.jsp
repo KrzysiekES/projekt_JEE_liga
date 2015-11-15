@@ -24,15 +24,15 @@
         <ul class="rozwijaneMenu">
           <li><a href="showAllPlayers.jsp">Wyświetl Wszystkich</a></li>
           <li><a href="getPlayerData.jsp">Dodaj</a></li>
-          <li><a href="#">Edytuj</a></li>
-          <li><a href="getPlayerData.jsp">Usuń</a></li>
+          <!--<li><a href="editPlayer.jsp">Edytuj</a></li>
+          <li><a href="getPlayerData.jsp">Usuń</a></li>-->
         </ul>
       </li>
       <li class="menu"><a href="#">Kluby</a>
       	<ul class="rozwijaneMenu">
-          <li><a href="#">Wyświetl Wszystkich</a></li>
-          <li><a href="#">Dodaj</a></li>
-          <li><a href="#">Usuń</a></li>
+          <li><a href="showAllClubs.jsp">Wyświetl Wszystkich</a></li>
+          <li><a href="getClubData.jsp">Dodaj</a></li>
+          <!--<li><a href="#">Usuń</a></li>-->
         </ul>
       </li>
       <li><a href="about">O mnie</a></li>
@@ -45,9 +45,11 @@
     <h3>Liga Piłkarska</h3>
     <div class="hamburger"><i class="fa fa-bars"></i></div>
     <ul class="rozwijaneResponsywne">
-      <li><a href="#">Dodaj piłkarza</a></li>
-      <li><a href="#">Zobacz Piłkarzy</a></li>
-      <li><a href="#">Edytuj piłkarza</a></li>
+      <li><a href="index.jsp">Strona Główna</a></li>
+      <li><a href="getPlayerData.jsp">Dodaj piłkarza</a></li>
+      <li><a href="showAllPlayers.jsp">Zobacz Piłkarzy</a></li>
+      <li><a href="getClubData.jsp">Dodaj Klub</a></li>
+      <li><a href="showAllClubs.jsp">Zobacz Kluby</a></li>
     </ul>
   </div>
   

@@ -27,15 +27,15 @@
         <ul class="rozwijaneMenu">
           <li><a href="showAllPlayers.jsp">Wyświetl Wszystkich</a></li>
           <li><a href="getPlayerData.jsp">Dodaj</a></li>
-          <li><a href="editPlayer.jsp">Edytuj</a></li>
-          <li><a href="getPlayerData.jsp">Usuń</a></li>
+          <!--<li><a href="editPlayer.jsp">Edytuj</a></li>
+          <li><a href="getPlayerData.jsp">Usuń</a></li>-->
         </ul>
       </li>
       <li class="menu"><a href="#">Kluby</a>
       	<ul class="rozwijaneMenu">
-          <li><a href="#">Wyświetl Wszystkich</a></li>
-          <li><a href="#">Dodaj</a></li>
-          <li><a href="#">Usuń</a></li>
+          <li><a href="showAllClubs.jsp">Wyświetl Wszystkich</a></li>
+          <li><a href="getClubData.jsp">Dodaj</a></li>
+          <!--<li><a href="#">Usuń</a></li>-->
         </ul>
       </li>
       <li><a href="about">O mnie</a></li>
@@ -48,9 +48,11 @@
     <h3>Liga Piłkarska</h3>
     <div class="hamburger"><i class="fa fa-bars"></i></div>
     <ul class="rozwijaneResponsywne">
-      <li><a href="#">Dodaj piłkarza</a></li>
-      <li><a href="#">Zobacz Piłkarzy</a></li>
-      <li><a href="#">Edytuj piłkarza</a></li>
+      <li><a href="index.jsp">Strona Główna</a></li>
+      <li><a href="getPlayerData.jsp">Dodaj piłkarza</a></li>
+      <li><a href="showAllPlayers.jsp">Zobacz Piłkarzy</a></li>
+      <li><a href="getClubData.jsp">Dodaj Klub</a></li>
+      <li><a href="showAllClubs.jsp">Zobacz Kluby</a></li>
     </ul>
   </div>
   
@@ -78,8 +80,8 @@
                             break;
                         }
                     }
-                    out.println("<form action='editcustomer'><input type='hidden' name='id' value='" + ID + "' /><tr class='tableheader'><td colspan='2'>Klient ID=" + ID + "</td></tr><tr><td>Imię:</td><td><input type='text' name='firstName' value='" + FirstName + "' /></td></tr><tr><td>Nazwisko:</td><td><input type='text' name='lastName' value='" + LastName + "' /></td></tr><tr><td>Numer telefonu:</td><td><input type='text' name='position' value='" + Position + "' /></td></tr><tr><td>Adres e-mail:</td><td><input type='text' name='number' value='" + Number + "' /></td></tr><tr><td colspan='2'><input type='submit' value='ZAPISZ'></td></tr></form>");
-                    out.println("<p align='center'><a href='showAllPlayers.jsp'>Powrót do listy klientów</a></p>");
+                    out.println("<form action='editPlayer'><input type='hidden' name='id' value='" + ID + "' /><tr><td colspan='2'>Id Piłkarza= " + ID + "</td></tr><tr><td>Id Klubu:</td><td><input type='text' name='clubId' value='" + ClubId + "' /></td></tr><tr><td>Imię:</td><td><input type='text' name='firstName' value='" + FirstName + "' /></td></tr><tr><td>Nazwisko:</td><td><input type='text' name='lastName' value='" + LastName + "' /></td></tr><tr><td>Pozycja:</td><td><input type='text' name='position' value='" + Position + "' /></td></tr><tr><td>Numer na koszulce:</td><td><input type='text' name='number' value='" + Number + "' /></td></tr><tr><td colspan='2'><input type='submit' value='ZAPISZ'></td></tr></form>");
+                  //  out.println("<p align='center'><a href='showAllPlayers.jsp'>Powrót do listy Piłkarzy</a></p>");
                 %>
 
             </table>
