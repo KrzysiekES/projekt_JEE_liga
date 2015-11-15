@@ -57,7 +57,7 @@
   
   <div class="glowna row text-center">
   <h1>Lista wszystkich piłkarzy</h1>
-	<div class="listaWszystkich">
+	<div class="listaWszystkich large-12 columns">
 	<%
 		int i=1;
   		for (Player player : storage.getAllPlayers()) {
@@ -71,15 +71,21 @@
 	%>
 
 	</div>
+	<div class="crud">
 	<form action="deletePlayer">
       <input type='text' name='iddelete' placeholder="Podaj ID"/>  
       <input type='submit' value="usun" />
     </form>
+    <br>
+    <br>
+    
     <form action="editPlayer.jsp">
       <input type='text' name='idedit' placeholder="Podaj ID"/>
       <input type='submit' value="edytuj" />
     </form>
-
+    </div>
+    <br>
+    <br>
 	<div class="przycisk">
   		<a href="getPlayerData.jsp">Dodaj kolejnego Piłkarza</a>
   	</div>

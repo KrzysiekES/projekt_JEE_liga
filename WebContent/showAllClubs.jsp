@@ -76,11 +76,12 @@
       <input type='number' name='iddelete' min="1"/>   
       <input type='submit' value="usun" />
     </form>
-
+    <br>
+    <br>
 	<div class="przycisk">
   		<a href="getClubData.jsp">Dodaj kolejny Klub</a>
   	</div>
-
+	
 </div>
 </body>
 </html>
