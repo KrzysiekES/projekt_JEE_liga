@@ -1,6 +1,9 @@
+<%@page import="main.java.com.example.projekt_jee_liga.domain.Player"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+    
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ page isELIgnored="false" %>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,10 +16,11 @@
   <script src="js/modernizr.js" type="text/javascript" ></script>
   <script src="js/foundation.min.js" type="text/javascript" ></script>
   <script src="js/main.js" type="text/javascript"></script>
+</head>
 <body>
 
 <jsp:useBean id="storage" class="main.java.com.example.projekt_jee_liga.service.StorageService" scope="application" />
-<jsp:useBean id="club" class="main.java.com.example.projekt_jee_liga.domain.Club" scope="session" />
+
  <!--Zwykłe menu -->
   <div class="row naglowek">
     <ul class="small-block-grid-5 columns">
@@ -54,18 +58,60 @@
     </ul>
   </div>
   
-  
-    <div class="glowna row">
-  <h2>Uzupełnij Formularz</h2>
-<form action="addClub.jsp">
+  <div class="glowna row text-center">
+  <h1>Lista wszystkich piłkarzy</h1>
+	<div class="listaWszystkich large-12 columns">
+	<table>
+	<%
+		int i=1;
+  		for (Player player : storage.getAllPlayers()) {
+	  		out.println("<tr><td><b>" + i +".</td><td></b> <b>id playera:</b></td><td>"
+  						+ player.getPlayerId() + "</td><td><b>id klubu:</td><td></b> "
+	  					+ player.getClubId() + "</td><td> <b>Imię:</b></td><td> "
+  						+ player.getFirstName() + "</td><td> <b>Nazwisko:</b></td><td> "
+	  					+ player.getLastName() + "</td><td> <b>Pozycja:</b></td><td> "
+  						+ player.getPosition() +"</td><td> <b>Numer:</b></td><td> "
+	  					+ player.getNumber() +"</td></tr>");
+ 			i++;
+ 			/*storage.getAllPlayers().get(2).getLastName();*/
+  		}
+  		/* usuwanie z listy
+  		storage.getAllPlayers().remove(storage.getAllPlayers().get(1));
+  		*/
+	%>
+	
+			<c:forEach var="player" items="${storage.AllPlayers}" varStatus="no">
+			<tr>
+				<td>${cd.playerId}</td>
+				<td>${cd.clubId}</td>
+				<td>${cd.firstName}</td>
+				<td>${cd.lastName}</td>
+				<td>${cd.position}</td>
+				<td>${cd.number}</td>
 
-  <div class="large-2 small-12 columns">Podaj id :<input type="number" min="1" name="clubId" value="${club.clubId}" /></div>
-  <div class="large-10 small-12 columns">Podaj nazwę :<input type="text" name="clubName" value="${club.clubName}" /></div>
-  <div class="large-6 small-12 columns">Podaj miasto :<input type="text"  name="clubCity" value="${club.clubCity}" /></div>
-  <div class="large-6 small-12 columns">Podaj menadzera :<input type="text"  name="clubMenager" value="${club.clubMenager}" /></div>
-  <div class="column"><input type="submit" value="Zatwierdź"></div>
+			</tr>
+		</c:forEach>
+</table>
+	</div>
+	<div class="crud">
+	<form action="deletePlayer">
+      <input type='text' name='iddelete' placeholder="Podaj ID"/>  
+      <input type='submit' value="usun" />
+    </form>
+    <br>
+    <br>
+    
+    <form action="editPlayer.jsp">
+      <input type='text' name='idedit' placeholder="Podaj ID"/>
+      <input type='submit' value="edytuj" />
+    </form>
+    </div>
+    <br>
+    <br>
+	<div class="przycisk">
+  		<a href="getPlayerData.jsp">Dodaj kolejnego Piłkarza</a>
+  	</div>
 
-</form>
 </div>
 </body>
 </html>

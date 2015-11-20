@@ -1,6 +1,4 @@
-<%@page import="main.java.com.example.projekt_jee_liga.domain.Player"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,9 +13,6 @@
   <script src="js/main.js" type="text/javascript"></script>
 </head>
 <body>
-
-<jsp:useBean id="storage" class="main.java.com.example.projekt_jee_liga.service.StorageService" scope="application" />
-
  <!--Zwykłe menu -->
   <div class="row naglowek">
     <ul class="small-block-grid-5 columns">
@@ -54,42 +49,16 @@
       <li><a href="showAllClubs.jsp">Zobacz Kluby</a></li>
     </ul>
   </div>
-  
-  <div class="glowna row text-center">
-  <h1>Lista wszystkich piłkarzy</h1>
-	<div class="listaWszystkich large-12 columns">
-	<%
-		int i=1;
-  		for (Player player : storage.getAllPlayers()) {
-	  		out.println("<p><b>" + i +".</b> <b>id playera:</b>" + player.getPlayerId() + " <b>id klubu:</b> " + player.getClubId() + " <b>Imię:</b> " + player.getFirstName() + " <b>Nazwisko:</b> " + player.getLastName() + " <b>Pozycja:</b> " + player.getPosition() +" <b>Numer:</b> "+ player.getNumber() +"</p>");
- 			i++;
- 			/*storage.getAllPlayers().get(2).getLastName();*/
-  		}
-  		/* usuwanie z listy
-  		storage.getAllPlayers().remove(storage.getAllPlayers().get(1));
-  		*/
-	%>
 
-	</div>
-	<div class="crud">
-	<form action="deletePlayer">
-      <input type='text' name='iddelete' placeholder="Podaj ID"/>  
-      <input type='submit' value="usun" />
-    </form>
-    <br>
-    <br>
-    
-    <form action="editPlayer.jsp">
-      <input type='text' name='idedit' placeholder="Podaj ID"/>
-      <input type='submit' value="edytuj" />
-    </form>
+  <div class="glowna row">
+    <div class="small-12 large-8 columns">
+      <img src="img/mecz.jpg" alt="mecz">
     </div>
-    <br>
-    <br>
-	<div class="przycisk">
-  		<a href="getPlayerData.jsp">Dodaj kolejnego Piłkarza</a>
-  	</div>
-
-</div>
+    <div class="zawartosc small-12 large-4 columns">
+      <h2>Witaj w lidze Piłkarskiej UG!</h2>
+      <p>Zobacz naszych piłarzy oraz kluby w których grają</p>
+        <p><a href="getPlayerData.jsp">Dodaj Piłkarza</a></p>
+    </div>
+  </div>
 </body>
 </html>

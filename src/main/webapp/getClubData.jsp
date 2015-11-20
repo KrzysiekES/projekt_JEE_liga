@@ -1,6 +1,6 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,8 +13,11 @@
   <script src="js/modernizr.js" type="text/javascript" ></script>
   <script src="js/foundation.min.js" type="text/javascript" ></script>
   <script src="js/main.js" type="text/javascript"></script>
-</head>
 <body>
+
+<jsp:useBean id="storage" class="main.java.com.example.projekt_jee_liga.service.StorageService" scope="application" />
+<jsp:useBean id="club" class="main.java.com.example.projekt_jee_liga.domain.Club" scope="session" />
+
  <!--Zwykłe menu -->
   <div class="row naglowek">
     <ul class="small-block-grid-5 columns">
@@ -51,16 +54,19 @@
       <li><a href="showAllClubs.jsp">Zobacz Kluby</a></li>
     </ul>
   </div>
+  
+  
+    <div class="glowna row">
+  <h2>Uzupełnij Formularz</h2>
+<form action="addClub.jsp">
 
-  <div class="glowna row">
-    <div class="small-12 large-8 columns">
-      <img src="img/mecz.jpg" alt="mecz">
-    </div>
-    <div class="zawartosc small-12 large-4 columns">
-      <h2>Witaj w lidze Piłkarskiej UG!</h2>
-      <p>Zobacz naszych piłarzy oraz kluby w których grają</p>
-        <p><a href="getPlayerData.jsp">Dodaj Piłkarza</a></p>
-    </div>
-  </div>
+  <div class="large-2 small-12 columns">Podaj id :<input type="number" min="1" name="clubId" value="${club.clubId}" /></div>
+  <div class="large-10 small-12 columns">Podaj nazwę :<input type="text" name="clubName" value="${club.clubName}" /></div>
+  <div class="large-6 small-12 columns">Podaj miasto :<input type="text"  name="clubCity" value="${club.clubCity}" /></div>
+  <div class="large-6 small-12 columns">Podaj menadzera :<input type="text"  name="clubMenager" value="${club.clubMenager}" /></div>
+  <div class="column"><input type="submit" value="Zatwierdź"></div>
+
+</form>
+</div>
 </body>
 </html>
