@@ -1,9 +1,8 @@
 <%@page import="main.java.com.example.projekt_jee_liga.domain.Player"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
-    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <%@ page isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="p" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>  
+
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -62,36 +61,17 @@
   <h1>Lista wszystkich piłkarzy</h1>
 	<div class="listaWszystkich large-12 columns">
 	<table>
-	<%
-		int i=1;
-  		for (Player player : storage.getAllPlayers()) {
-	  		out.println("<tr><td><b>" + i +".</td><td></b> <b>id playera:</b></td><td>"
-  						+ player.getPlayerId() + "</td><td><b>id klubu:</td><td></b> "
-	  					+ player.getClubId() + "</td><td> <b>Imię:</b></td><td> "
-  						+ player.getFirstName() + "</td><td> <b>Nazwisko:</b></td><td> "
-	  					+ player.getLastName() + "</td><td> <b>Pozycja:</b></td><td> "
-  						+ player.getPosition() +"</td><td> <b>Numer:</b></td><td> "
-	  					+ player.getNumber() +"</td></tr>");
- 			i++;
- 			/*storage.getAllPlayers().get(2).getLastName();*/
-  		}
-  		/* usuwanie z listy
-  		storage.getAllPlayers().remove(storage.getAllPlayers().get(1));
-  		*/
-	%>
-	
-			<c:forEach var="player" items="${storage.AllPlayers}" varStatus="no">
+    	<p:forEach var="player" items="${storage.getAllPlayers()}" varStatus="no">
 			<tr>
-				<td>${cd.playerId}</td>
-				<td>${cd.clubId}</td>
-				<td>${cd.firstName}</td>
-				<td>${cd.lastName}</td>
-				<td>${cd.position}</td>
-				<td>${cd.number}</td>
-
+				<td>id: ${player.playerId}</td>
+				<td>id Klubu: ${player.clubId}</td>
+				<td>imie: ${player.firstName}</td>
+				<td>nazwisko: ${player.lastName}</td>
+				<td>pozycja: ${player.position}</td>
+				<td>numer na koszulce: ${player.number}</td>
 			</tr>
-		</c:forEach>
-</table>
+		</p:forEach>
+	</table>
 	</div>
 	<div class="crud">
 	<form action="deletePlayer">
